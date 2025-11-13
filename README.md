@@ -1,77 +1,54 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# Mini Dashboard – React.js Dashboard Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React.js dashboard built with TypeScript and Material-UI featuring user management, project management, and analytics.
 
-Currently, two official plugins are available:
+## 🚀 Quick Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+````bash
+# Clone the repository
+git clone <your-repo-url>
+cd dashboard-application
 
-## React Compiler
+# Install dependencies
+npm install
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+# Start development server
+npm run dev
 
-## Expanding the ESLint configuration
+# Build for production
+npm run build
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+#### 3. **Libraries Used**
+👉 The main tools or packages used in your app.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```md
+## 📦 Libraries Used
+- React 18 with TypeScript
+- Material-UI (MUI)
+- React Router DOM
+- Axios
+- UUID
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ✨ Features Completed
+- Login authentication (mock)
+- Dashboard with statistics cards
+- User management (view, edit, delete)
+- Project management (create, update, filter)
+- Dark/Light theme toggle
+- Responsive design
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🔧 Improvements & Limitations
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-=======
-# dashboard-application
->>>>>>> f84a080b4c05c019da0883abfc992cfbb0e804ce
+### Improvements
+- Added responsive sidebar and theme toggle
+- Implemented TypeScript for type safety
+- Added error handling and validation
+
+### Limitations
+- No real backend (mock login)
+- Data stored in localStorage (temporary)
+- No image upload support
+````
