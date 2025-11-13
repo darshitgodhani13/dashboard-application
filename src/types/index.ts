@@ -1,0 +1,29 @@
+export type User = {
+  id: number;
+  name: string;
+  username?: string;
+  email: string;
+  phone?: string;
+  website?: string;
+  company?: {
+    name: string;
+    catchPhrase?: string;
+    bs?: string;
+  };
+  address?: {
+    street?: string;
+    suite?: string;
+    city?: string;
+    zipcode?: string;
+  };
+};
+
+export type Project = {
+  id: string;
+  name: string;
+  description?: string;
+  status: "active" | "paused" | "completed";
+  createdAt: string;
+};
+
+export type ThemeMode = "light" | "dark";
